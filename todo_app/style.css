@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: antiquewhite;
+}
+
+.todo-list li .item-name {
+    flex: 1;
+    padding: 5px 10px;
+}
+
+.todo-list li .delete-icon {
+    transform: scale(0);
+    transition: transform 200ms;
+    font-size: 30px !important;
+}
+
+.todo-list li:hover .delete-icon {
+    transform: scale(1);
+}
+
+.todo-list li[item-completed] .item-name {
+    text-decoration: line-through;
+    color: brown;
+}

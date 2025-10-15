@@ -1,14 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>TO DO APP</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"
+        integrity="sha512-HvOjJrdwNpDbkGJIG2ZNqDlVqMo77qbs4Me4cah0HoDrfhrbA+8SBlZn1KrvAQw7cILLPFJvdwIgphzQmMm+Pw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+        integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <div class="container">
+        <h1 class="text-center">To Do List</h1>
+
+        <form class="todo-form border rounded p-3 mb-3">
+            <div class="input-group">
+                <input type="text" id="item_name" class="form-control" placeholder="Öge Ekle">
+                <button class="btn btn-primary" type="submit"><i class="bi bi-plus"></i></button>
+            </div>
+        </form>
+
+        <div class="alert alert-danger">Öge Yok!</div>
+
+        <div class="filter-buttons border rounded p-3 mb-3">
+            <button item-filter="all" class="btn btn-primary">Hepsi</button>
+            <button item-filter="incompleted" class="btn btn-secondary">Tamamlanmamış</button>
+            <button item-filter="completed" class="btn btn-secondary">Tamamlanmış</button>
+        </div>
+
+        <ul class="todo-list list-unstyled">
+
+        </ul>
+
+        <button class="btn btn-outline-danger clear">Temizle</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
